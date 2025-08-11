@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actualités boursières</title>
+    <!-- feuille de style commune -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Actualités boursières</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="investissements.html">Mes investissements</a></li>
+          <li><a href="simulateur.html">Simulateur de patrimoine</a></li>
+          <li><a href="definitions.html">Guides &amp; définitions</a></li>
+          <li><a href="news.html">Actualités boursières</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section pour l'ETF -->
+      <section id="etf-section">
+        <h2>Prix de l'ETF IE0002XZSHO1</h2>
+        <p id="etf-status">Chargement du prix...</p>
+        <div id="etf-info" style="display: none;">
+          <p><strong>Prix actuel :</strong> <span id="etf-price"></span> €</p>
+          <p><strong>Dernière mise à jour :</strong> <span id="etf-date"></span></p>
+        </div>
+      </section>
+
+      <!-- Section pour les actualités -->
+      <section id="news-section">
+        <h2>Dernières actualités</h2>
+        <p id="news-status">Chargement des actualités...</p>
+        <div id="news-list" style="display: none;"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Les informations affichées sont fournies à titre indicatif et proviennent
+        de sources publiques. Les prix et les nouvelles sont sujets à des
+        mises à jour régulières.
+      </p>
+    </footer>
+
+    <script src="news.js"></script>
+  </body>
+</html>
