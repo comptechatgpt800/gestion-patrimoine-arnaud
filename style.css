@@ -1,0 +1,287 @@
+
+/*
+ * Feuille de styles modernisée pour la gestion patrimoniale d'Arnaud.
+ * 
+ * Ce design vise une esthétique claire, lumineuse et contemporaine avec
+ * une palette de bleus et de gris, des cartes à bord arrondi et de
+ * petites ombres pour distinguer les sections. Les variables CSS
+ * facilitent la personnalisation globale du thème.
+ */
+
+/* Import facultatif d'une police moderne (Inter) ; si la police n'est
+ * pas disponible lors du chargement, les polices système prennent le
+ * relais. L'import permettra à la page hébergée d'utiliser cette
+ * typographie lorsque l'accès à Internet est possible.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* variables globales */
+:root {
+  --primary-color: #2a4365;        /* couleur principale (en-tête, pied) */
+  --secondary-color: #3182ce;      /* couleur d'accentuation pour titres et boutons */
+  --background-color: #f7fafc;     /* fond très clair */
+  --card-background: #ffffff;      /* fond des cartes */
+  --border-color: #e2e8f0;         /* bordures légères */
+  --text-color: #2d3748;           /* texte principal (gris anthracite) */
+  --secondary-text-color: #4a5568; /* texte secondaire */
+  --button-color: #3182ce;         /* couleur des boutons */
+  --button-hover-color: #2c5282;   /* couleur des boutons au survol */
+  --link-color: #2b6cb0;           /* couleur des liens */
+  --link-hover-color: #2c5282;     /* couleur des liens au survol */
+}
+
+/* style général */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* En‑tête commun à toutes les pages */
+header {
+  background-color: var(--primary-color);
+  color: #f7fafc;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #cbd5e0;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Mise en page principale */
+main {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+/* Page d'accueil : mise en avant des fonctionnalités */
+.landing {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.feature {
+  flex: 1 1 280px;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feature h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+.feature p {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+/* Sections communes (cartes) */
+section {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Formulaires */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #edf2f7;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background-color: #d69e2e;
+}
+
+.edit-btn:hover {
+  background-color: #b7791f;
+}
+
+.delete-btn {
+  background-color: #e53e3e;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+}
+
+/* Résumé, graphiques et simulateur */
+#summary {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: 320px;
+  margin: 0 auto;
+}
+
+#result-section {
+  display: none;
+}
+
+#result-section.active {
+  display: block;
+}
+
+/* Liens */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: #cbd5e0;
+  font-size: 14px;
+}
+
+/* Styles spécifiques aux éléments d'actualité */
+.news-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: var(--secondary-color);
+}
+
+.news-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+}
